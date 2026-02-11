@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Question</title>
+    <title>A Special Question from Joker</title>
     <style>
         body {
             margin: 0;
             height: 100vh;
-            display: flex;
+            
             align-items: center;
             justify-content: center;
             background-color: #ffeef2;
@@ -16,13 +16,18 @@
             overflow: hidden;
         }
 
-        .container {
+        .container {align-items:center;
             text-align: center;
             background: white;
             padding: 3rem;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             z-index: 10;
+        }
+        marquee{
+            color:violet;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         h1 {
@@ -72,7 +77,7 @@
     </style>
 </head>
 <body>
-
+<center><img src="joker1.jpg"style=";width:50%;height:30%;"/></center>
     <div class="container">
         <h1 id="question">Will you be my Valentine? ❤️</h1>
         <div class="buttons">
@@ -107,10 +112,20 @@
         // What happens on "Yes"
         function celebrate() {
             const container = document.querySelector('.container');
-            container.innerHTML = `
+            container.innerHTML = `<center><img src="joker2.jpg"style=";width:20%;height:20%;"/></center>
                 <h1 style="font-size: 4rem;">Yay! 🥰</h1>
                 <p style="font-size: 1.5rem; color: #555;">I knew you'd say yes!</p>
                 <div style="font-size: 5rem;">💖✨💍</div>
+                <marquee>HAHAHA!, Why so serious?</marquee>
+            `;
+            // Trigger extra hearts
+            for(let i=0; i<50; i++) {
+                setTimeout(createHeart, i * 20);
+            }
+        }
+    </script>
+</body>
+</html>                <div style="font-size: 5rem;">💖✨💍</div>
             `;
             // Trigger extra hearts
             for(let i=0; i<50; i++) {
